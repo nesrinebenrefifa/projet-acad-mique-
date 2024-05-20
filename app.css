@@ -1,0 +1,19 @@
+/* Style de base des boutons */
+.button {
+    background-color: #4CAF50; /* Couleur de fond */
+    border: none; /* Suppression de la bordure */
+    color: white; /* Couleur du texte */
+    padding: 15px 32px; /* Espacement intérieur */
+    text-align: center; /* Alignement du texte */
+    text-decoration: none; /* Suppression du soulignement du texte */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marge autour du bouton */
+    cursor: pointer; /* Curseur de souris */
+  }
+  
+  /* Style des boutons au survol */
+  .button:hover {
+    background-color: #45a049; /* Changement de couleur de fond */
+  }
+  

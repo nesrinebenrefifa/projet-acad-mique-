@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Données de capteur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .data {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: green;
+            padding-top: 20px;
+        }
+        
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        
+        .sidebar p {
+            color: white;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+            cursor:pointer ;
+            
+        }
+        
+        .content :hover{
+            margin-left: 250px;
+            padding: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Température: <span id="temperature"></span></p>
+        <p>Humidité: <span id="humidity"></span></p>
+        <p>Historique de l'irrigation:</p>
+        <ul id="irrigation-history">
+            <!-- Les éléments de l'historique de l'irrigation seront ajoutés dynamiquement par JavaScript -->
+        </ul>
+    </div>
+    
+  
+    <div class="container">
+        <h1>Données de capteur</h1>
+        <div class="data">
+            <h2 id="temperature">Température: {{ temp_hum_data.temp }}</h2>
+        </div>
+        <div class="data">
+        
+            <h2>Humidité: {{ temp_hum_data.soil }}</h2>
+            <h2>Humidité: {{ soil_data }}</h2>
+        </div>
+  
+    {% comment %} <h1>Send Email</h1> {% endcomment %}
+    {% comment %} <form action="/send_email" method="post">
+        <label for="recipient">Recipient:</label>
+        <input type="email" id="recipient" name="recipient" required><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="body">Body:</label><br>
+        <textarea id="body" name="body" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Send</button>
+    </form>
+   {% endcomment %}
+</body>
+</html>
+
